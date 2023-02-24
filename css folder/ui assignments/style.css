@@ -72,12 +72,13 @@
   display: flex;
 }
 .content span {
-  font-size: 13px;
+  font-size: 11px;
   font-family: "Mouse Memoirs", sans-serif;
   font-family: "Roboto", sans-serif;
   display: flex;
 }
 .content .a-img img {
+  object-fit: cover;
   display: flex;
   justify-content: center;
 }
