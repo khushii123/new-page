@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        /*background-color: aquamarine;*/
+        margin: 0;
+      }
+      .container {
+        border: 5px solid yellow;
+        background-color: blue;
+      }
+      h1 {
+        background-color: aquamarine;
+        padding: 12px 12px 12px 0;
+      }
+
+      h2 {
+        background-color: red;
+        /*this 0px padding apply on top-bottom means y-exis and 0 will be apply on left-right means x-exis */
+
+        padding: 0 12px;
+      }
+
+      h3 {
+        background-color: rgb(255, 0, 234);
+        /*this 12px padding apply on top-bottom means y-exis and 0 will be apply on left-right*/
+        padding: 12px 0;
+      }
+
+      p {
+        margin: 0;
+        /* padding-top: 10px;
+        padding-right: 20px;
+        padding-left: 50px; 
+        this margin will not work because we declared margin-0 in body
+        */
+        margin: 10px 20px 30px 50pxx;
+        padding: 10px 20px 30px 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <p>Hello World</p>
+      <h1>Hello Heading</h1>
+
+      <h2>Hello from X axis</h2>
+      <h3>Hello from Y axis</h3>
+    </div>
+  </body>
+</html>

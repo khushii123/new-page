@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Class Selector</title>
+    <style>
+      /*here is we have high priority because here we high specifity*/
+      p.para .test2 {
+        color: darkorchid;
+      }
+      /*it will not work beacuse it have least specifity*/
+      .test2 {
+        color: aqua;
+      }
+      p.para {
+        color: darkorange;
+      }
+
+      .para {
+        color: red;
+        background-color: green;
+      }
+      .a {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <p class="para a">A</p>
+    <p class="para b">B</p>
+    <p class="para c">B</p>
+    <p class="para d">D</p>
+    <p class="para e">E</p>
+    <p class="para">
+      <span class="test1 test2"> specifity test </span>
+    </p>
+  </body>
+</html>

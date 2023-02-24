@@ -1,0 +1,83 @@
+.header {
+  display: flex;
+  justify-content: flex-end;
+}
+.navbar {
+  padding: 4px;
+  display: flex;
+  justify-content: flex-end;
+}
+.icn {
+  padding: 5px;
+}
+.font {
+  padding: 6px;
+  margin-top: 2px;
+}
+.img {
+  padding: 0px;
+}
+.font a {
+  text-decoration: none;
+  color: black;
+}
+.logo {
+  margin-top: 5%;
+  display: flex;
+  justify-content: center;
+}
+.input-box {
+  margin-left: 23%;
+  margin-top: 3%;
+  border-radius: 42px;
+  height: 55px;
+  justify-content: space-between;
+  width: 53%;
+  text-align: center;
+  display: flex;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.input-box .src-icon {
+  padding: 15px;
+}
+.input-box .i-box {
+  font-size: 15px;
+}
+.text:focus {
+  outline: none;
+}
+.i-box input {
+  border: none;
+  font-size: 15px;
+  margin: 0 385px 0 0;
+  display: flex;
+  padding-top: 18px;
+  text-align: center;
+}
+.content {
+  gap: 11px;
+  padding: 40px;
+  flex-wrap: wrap;
+  display: flex;
+  width: 600px;
+  margin-left: 28%;
+}
+.content .a-img {
+  border-radius: 60%;
+  padding: 6%;
+  box-shadow: rgb(0 0 0 / 15%) 1px 3px 6px;
+}
+
+.content .a-img span {
+  display: flex;
+}
+.content span {
+  font-size: 13px;
+  font-family: "Mouse Memoirs", sans-serif;
+  font-family: "Roboto", sans-serif;
+  display: flex;
+}
+.content .a-img img {
+  display: flex;
+  justify-content: center;
+}
