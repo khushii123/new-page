@@ -1,0 +1,184 @@
+body {
+  font-family: "Mouse Memoirs", sans-serif;
+  font-family: "Roboto", sans-serif;
+  font-family: "Roboto Condensed", sans-serif;
+  margin: 0;
+}
+#header {
+  height: 80px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  background-color: #e9e9e9;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+}
+.left {
+  margin-left: 50px;
+  flex: 4;
+  display: flex;
+  align-items: center;
+}
+.right {
+  align-items: center;
+  text-align: center;
+  display: flex;
+  gap: 60px;
+  flex: 5;
+}
+
+.text {
+  display: flex;
+  align-items: center;
+}
+.text a {
+  color: black;
+}
+.text:hover {
+  color: rgb(251, 98, 42);
+}
+.i-text {
+  cursor: pointer;
+}
+.text sup {
+  color: #ffa700;
+  font: size 10px;
+}
+.main {
+  background-color: rgb(50, 41, 69);
+  display: flex;
+  flex: wrap;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  padding: 41px 0px 20px 0px;
+}
+.card img {
+  object-fit: cover;
+  cursor: pointer;
+}
+.main .card img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12), 0 4px 8px rgba(0, 0, 0, 0.06);
+  transition: transform 0.5s;
+}
+button {
+  margin-right: -60px;
+  border: none;
+  border-radius: 100%;
+  text-align: center;
+  margin-top: 105px;
+  cursor: pointer;
+  width: 47px;
+  height: 47px;
+}
+.a-text a:hover {
+  color: rgb(251, 98, 42);
+}
+.a-text a {
+  padding-bottom: 6px;
+  border-bottom: solid 2px black;
+  text-decoration: none;
+  color: black;
+}
+.text svg:hover path {
+  fill: rgb(251, 98, 42);
+}
+.heading h1 {
+  color: rgb(28, 28, 28);
+  font-weight: 500;
+}
+.heading {
+  position: relative;
+  padding-left: 97px;
+}
+.food-card {
+  margin-bottom: 12px;
+  display: flex;
+  justify-content: center;
+  gap: 31px;
+}
+.food-img {
+  width: 348px;
+  border-radius: 13px;
+  object-fit: cover;
+}
+.food-img:hover {
+  cursor: pointer;
+  border-color: rgb(232, 232, 232);
+  box-shadow: rgb(28 28 28 / 12%) 0px 0.4rem 1.8rem;
+  box-sizing: border-box;
+}
+.f-img {
+  padding-top: 10px;
+  justify-content: center;
+  display: flex;
+  position: relative;
+}
+.f-img img {
+  border-radius: 12px;
+}
+.promt {
+  margin-top: 10px;
+  left: 32px;
+  padding: 0 6px 0 6px;
+  border-radius: 5px;
+  background: rgba(0, 0, 0, 0.3);
+  position: absolute;
+}
+
+.offer {
+  gap: 7rem;
+  bottom: 2px;
+  display: flex;
+  position: absolute;
+  justify-content: space-between;
+}
+.offer p {
+  margin-right: 21px;
+  padding: 1px;
+  font-weight: 400;
+  color: azure;
+  background-color: blue;
+}
+.offer .time {
+  border-radius: 4px;
+  padding: 2px 5px 0 5px;
+  color: grey;
+  background: rgba(255, 255, 255, 0.8);
+}
+.i-text {
+  padding: 0 8px 0 8px;
+  gap: 43px;
+  margin-bottom: -22px;
+  font-size: 19px;
+  font-weight: 500;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+}
+.i-text .eleps {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.star .span {
+  font-size: 10px;
+}
+.star {
+  gap: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  color: white;
+  background: green;
+}
+.star .n-text {
+  font-size: 14px;
+}
+.light-text {
+  padding: 0 8px 0 8px;
+  color: rgb(105, 105, 105);
+  display: flex;
+  justify-content: space-between;
+}
