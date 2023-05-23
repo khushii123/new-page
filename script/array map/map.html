@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  const users = [
+    {
+      id: 1,
+      name: "Aman",
+      city: "Pune",
+    },
+    {
+      id: 2,
+      name: "Rahul",
+      city: "Delhi",
+    },
+    {
+      id: 3,
+      name: "Abhinav",
+      city: "Dehradun",
+    },
+  ];
+
+  const orders = [
+    {
+      orderId: 101,
+      userId: 1,
+      productName: "iPhone 12 Pro",
+    },
+    {
+      orderId: 102,
+      userId: 1,
+      productName: "iPhone 13 Pro",
+    },
+    {
+      orderId: 103,
+      userId: 1,
+      productName: "iPhone 14 Pro",
+    },
+    {
+      orderId: 104,
+      userId: 2,
+      productName: "Samsung S23",
+    },
+  ];
+
+  const result = [
+    {
+      userId: 1,
+      name: "Aman",
+      orders: [
+        {
+          orderId: 101,
+          productName: "iPhone 12 Pro",
+        },
+        {
+          orderId: 102,
+          productName: "iPhone 13 Pro",
+        },
+        {
+          orderId: 103,
+          productName: "iPhone 14 Pro",
+        },
+      ],
+    },
+    {
+      userId: 2,
+      name: "Rahul",
+      orders: [
+        {
+          orderId: 104,
+          productName: "Samsung S23",
+        },
+      ],
+    },
+    {
+      userId: 3,
+      name: "Abhinav",
+      orders: [],
+    },
+  ];
+
+  // Write a program to form a result array using map & filter or anyting but map is a must
+  // Use abobe users & orders array
+
+  // Way 1
+  const result1s = users.map((user) => {
+    const ordersNew = orders
+      .filter((order) => user.id === order.userId)
+      .map((item) => {
+        const { orderId, productName } = item;
+        return { orderId, productName };
+      });
+
+    const currentUser = {};
+    currentUser.userId = user.id;
+    currentUser.name = user.name;
+    currentUser.orders = ordersNew;
+    return currentUser;
+  });
+  console.log(result1s);
+
+  // Way 2
+  const result2 = users.map((user) => {
+    const orders = [];
+    for (let item of orders) {
+      const { userId, productName, orderId } = item;
+      if (userId === user.id) {
+        orders.push({ productName, orderId });
+      }
+    }
+
+    const currentUser = {};
+    currentUser.userId = user.id;
+    currentUser.name = user.name;
+    currentUser.orders = orders;
+    return currentUser;
+  });
+
+  console.log("Reduce Code_________________________");
+  // Way 3
+  const result3 = users.map((user) => {
+    const filteredOrders = orders.reduce((prev, current) => {
+      console.log({ prev, current });
+      const { orderId, userId, productName } = current;
+      if (userId === user.id) {
+        prev.push({ productName, orderId });
+      }
+
+      return prev;
+    }, []);
+
+    const currentUser = {};
+    currentUser.userId = user.id;
+    currentUser.name = user.name;
+    currentUser.orders = filteredOrders;
+    return currentUser;
+  });
+
+  console.log(result);
+</script>
+
+<script>
+  const result22 = [1, 2, 3, 4, 5, 6].reduce((acc, current) => {
+    console.log(acc, current);
+    if (current % 2 === 0) {
+      acc.push(current * 2);
+    }
+
+    return acc;
+  }, []);
+
+  const result23 = [1, 2, 3, 4, 5, 6].reduce((acc, current) => {
+    acc += current;
+    return acc;
+
+    return acc;
+  }, 0);
+
+  const result24 = [1, 2, 3, 4, 5, 6].reduce((acc, current) => acc + current);
+</script>

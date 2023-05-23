@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  //console.log(nAdd(100, 490, "ankit", 50, null, 490, "30", 50, "", false));
+  // parsent change the integer value in nuber for eaxample
+  //"10"=10 and "khushi"=Nan
+  function tNum() {
+    sum = 0;
+    for (let i = 0; i < arguments.length; i++) {
+      let num = parseInt(arguments[i]);
+      //  console.log(num);
+      if (typeof arguments[i] === "number" && !isNaN(arguments[i])) {
+        sum += arguments[i];
+      }
+    }
+
+    return sum;
+  }
+  console.log(tNum(100, 490, "ankit", 50, null, 490, "30", 50, "", false));
+
+  //(1 optimisation of this code)
+  function nAdd() {
+    let sum = 0;
+    for (let index = 0; index < arguments.length; index++) {
+      const currentVal = Number(arguments[index]);
+
+      if (Number.isNaN(currentVal)) {
+        continue;
+      }
+
+      sum += currentVal;
+    }
+    return sum;
+  }
+  console.log(nAdd(100, 490, "ankit", 50, null, 490, "30", 50, "", false));
+  console.log(nAdd(100, 490, "ankit", 50, null, 490, "30", 50, "", false, NaN));
+
+  //2 -optimisation
+  function nAdd(...args) {
+    let sum = 0;
+    for (let i = 0; i < args.length; i++) {
+      const currentVal = Number(args[i]);
+      if (!isNaN(currentVal)) {
+        sum += currentVal;
+      }
+    }
+    return sum;
+  }
+  console.log(nAdd(100, 490, "ankit", 50, null, 490, "30", 50, "", false, NaN));
+</script>

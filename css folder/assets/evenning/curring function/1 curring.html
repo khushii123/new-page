@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  /* CURRING EXAMPLE
+1) we created normal function with parameter(any)
+2) we return a function with a particular return at the end (whaterver you wanted to do eg Addition)
+3) check the output
+*/
+
+  function add(x) {
+    return function (y) {
+      return function (z) {
+        return x + y + z;
+      };
+    };
+  }
+
+  const result = add(3)(4)(5);
+  console.log(result);
+
+  function adding(x) {
+    return function (y) {
+      return function (z) {
+        return x + y + z;
+      };
+    };
+  }
+  const results = add(0)(4)(5);
+  console.log(results);
+</script>

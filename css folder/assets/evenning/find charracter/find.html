@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  /*2-qus;-const input = "aaaabbaaccc345678cccccccccc#$%^&*(cccccde";*/
+  /* Output
+{
+    character: 'c',
+    count: 18
+}
+*/
+  function find(str) {
+    let count = 0;
+    let newstr = str.toLowerCase();
+    for (let i = 0; i < newstr.length; i++) {
+      if (newstr[i] === "c") {
+        count++;
+      }
+    }
+    return count;
+  }
+
+  console.log(find("aaaabbaaccccccccccccccccccde"));
+</script>
+<script>
+  function find(str) {
+    let count = 0;
+    let newstr = str.toLowerCase();
+    for (let i = 0; i < newstr.length; i++) {
+      let char = newstr.charCodeAt(i);
+      if (char >= 97 && char <= 122 && char === 99) {
+        count++;
+      }
+    }
+    return count;
+  }
+
+  console.log(find("aaaabbaaccc345678cccccccccc#$%^&*(cccccde"));
+</script>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  /* console.log(tNum(100, 490, "ankit", 50, null, 490, "30", 50, "", false));
+
+  let arrowFunc = () => {
+      console.log("I'm an Arrow Function");
+    };*/
+  const tNum = (...arguments) => {
+    let sum = 0;
+    for (let i = 0; i < arguments.length; i++) {
+      let num = parseInt(arguments[i]);
+      //  console.log(num);
+      if (typeof arguments[i] === "number" && !isNaN(arguments[i])) {
+        sum += arguments[i];
+      }
+    }
+    return sum;
+  };
+
+  console.log(tNum(100, 490, "ankit", 50, null, 490, "30", 50, "", false));
+</script>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+
+<script>
+  // Create
+  const profile = {
+    name: "Arun",
+    city: "Pune",
+    details: {
+      phone: 99,
+      isActive: true,
+    },
+  };
+
+  // Read
+  console.log(profile.name); // "Arun"
+  console.log(profile["name"]); // "Arun"
+  console.log(profile.details.phone); // 99
+  console.log(profile["details"]["phone"]); // 99
+  console.log(profile.details.country); // undefined
+  console.log(profile.country);
+</script>

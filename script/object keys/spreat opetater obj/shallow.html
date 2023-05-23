@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  const profile = {
+    name: "Ankit",
+    city: "Morena",
+    details: {
+      pincode: 476001,
+      isActive: true,
+    },
+  };
+
+  const profileCopy = { ...profile };
+
+  profileCopy.name = "Priyansh";
+  profileCopy.details.pincode = 99999;
+  //this will do change in both and output will we 99999,non-premitive wull create his new block
+
+  console.log(profile, profileCopy);
+</script>

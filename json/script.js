@@ -257,8 +257,6 @@ for (let i = 0; i < mereProducts.length; i++) {
  const imageElement = document.createElement("img");
  const ratingElement = document.createElement("p");
 
- const btnElement = document.createElement("button");
- btnElement.className="button"
 
 
 
@@ -268,15 +266,10 @@ for (let i = 0; i < mereProducts.length; i++) {
  categoryElement.textContent = mereProducts[i].category;
  descriptionElement.textContent = mereProducts[i].description;
  imageElement.src = mereProducts[i].image;
- // ratingElement.textContent = mereProducts[i].rating;
-
- // const { rate, count } = mereProducts[i].rating;
- // ratingElement.textContent = `${rate} ${count}`;
  
  const { rate, count } = mereProducts[i].rating;
  ratingElement.textContent = `Rating:${rate}  reviews:${count}`;
 
- btnElement.textContent ="button";
 
  productItemContainer.appendChild(idElement);
  productItemContainer.appendChild(imageElement);

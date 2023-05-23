@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  //first
+  const array = [1, 12, 3, , 4, 5];
+  array.length = 0;
+  console.log("first", array);
+  //second
+
+  var arr = [1, 2, 3, , 4, 5];
+  arr = [];
+
+  console.log("second", arr);
+
+  //reassignment
+
+  let myarr = [1, 2, 3, 4, 5];
+  myarr = [6, 7, 8, 9];
+  console.log("reassign-arr", myarr);
+
+  ///spread operator...
+
+  const arr1 = [1, 2, 3];
+  const arr2 = [4, 5, 6];
+  const arr3 = [...arr1, ...arr2];
+  console.log(arr3); // [1, 2, 3, 4, 5, 6]
+
+  //2-method
+  const numbers = [1, 2, 3];
+  console.log(...numbers); // 1 2 3
+</script>

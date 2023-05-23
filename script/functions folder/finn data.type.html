@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  // "ankit" -> String
+  // {name:'Ankit'} -> Object
+  // false -> Boolean
+  // [] -> Array
+  // null or undefined -> Please enter a valid number
+  // 100 -> Number
+
+  // Write a function to find the data type of an input
+
+  /* function checkDataType(input) {
+    if (typeof input === " String") {
+      return "String";
+    } else if (typeof input === " Number") {
+      return "Number";
+    } else if (typeof input === "Array") {
+      return "array";
+    } else if (typeof input === "false") {
+      return "boolean";
+    } else if (typeof input === "object") {
+      return "object";
+    } else {
+      return "enter a valid number";
+    }
+  }
+  console.log(checkDataType("[]"));*/
+
+  // <------------#-------------->
+  // how to ceck array
+  //  Array.isArray(arr)
+  //arr instance Array
+  function checkDataType(input) {
+    if (input === null || input === undefined) {
+      console.log("Please enter a valid number");
+    } else if (Array.isArray(input)) {
+      console.log("Array");
+    } else {
+      console.log(typeof input);
+    }
+  }
+  checkDataType("ankit"); //  "string"
+  checkDataType({ name: "Ankit" }); //  "object"
+  checkDataType(false); //  "boolean"
+  checkDataType([]); //  "Array"
+  checkDataType(null); //  "Please enter a valid number"
+  checkDataType(undefined); //  "Please enter a valid number"
+  checkDataType(100); // "number"
+</script>

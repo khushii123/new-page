@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  function nMultiple() {
+    let mul = 1;
+    for (let i = 0; i < arguments.length; i++) {
+      mul = mul * arguments[i];
+    }
+
+    return mul;
+  }
+
+  console.log(nAdd(10, 40));
+  console.log(nAdd(10, 40, 30));
+  console.log(nAdd(10, 40, 30, 50));
+  console.log(nAdd(100, 490, 30, 50));
+  console.log(nAdd(100));
+  console.log(nAdd());
+</script>
